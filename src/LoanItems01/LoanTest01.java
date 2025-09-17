@@ -11,13 +11,16 @@ public class LoanTest01 {
         LoanItem[] loanItems = helperClass.askAmountOfItems();
 
         System.out.println("The following items are now registered: ");
+        System.out.println("--------------------");
+        System.out.println("ID   TYPE    TITLE");
 
         int count = 1;
         for (LoanItem loanItem : loanItems) {
-            System.out.println("◆ ITEM no. " + count);
+            System.out.print(count);
             System.out.println(loanItem);
             count++;
         }
+        System.out.println("\n -- End of program --");
     }
 }
 

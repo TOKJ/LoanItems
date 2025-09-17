@@ -7,9 +7,8 @@ class Video extends LoanItem {
     }
 
 
-    @Override
     public String toString() {
-        return "        \n▸ Name: " + name + "        \n▹ Type: " + type + "";
+        return "    "+ name + "   " + type;
     }
 
 }

@@ -25,7 +25,7 @@ public class LoanItem {
     //toString
     @Override
     public String toString() {
-        return "        \n▸ Name: " + name + "        \n▹ Type: " + type + "";
+        return "   "+ name + "    " + type;
     }
 
 }
