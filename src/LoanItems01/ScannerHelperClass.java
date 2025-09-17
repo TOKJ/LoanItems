@@ -61,10 +61,15 @@ public class ScannerHelperClass {
 
 
             if (type.equalsIgnoreCase("Book")) {
-                loanItemRegister[i] = new Book(name, "Book");
+                int listNumber = loanItemRegister[i].getListNumber();
+                listNumber++;
+                loanItemRegister[i] = new Book(name, "Book", listNumber);
+
 
             } else if (type.equalsIgnoreCase("Video")) {
-                loanItemRegister[i] = new Video(name, "Video");
+                int listNumber = loanItemRegister[i].getListNumber();
+                listNumber++;
+                loanItemRegister[i] = new Video(name, "Video", listNumber);
             }
         }
 

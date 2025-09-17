@@ -1,13 +1,17 @@
 package LoanItems01;
 
+import java.util.stream.IntStream;
+
 public class LoanItem {
 
     protected String name;
     protected String type;
+    protected int listNumber;
 
-    public LoanItem(String name, String type) {
+    public LoanItem(String name, String type, int listNumber) {
         this.name = name;
         this.type = type;
+        this.listNumber = listNumber++;
     }
 
 
@@ -19,11 +23,15 @@ public class LoanItem {
         return type;
     }
 
+    public Integer getListNumber() {
+        return listNumber;
+    }
+
 
     //toString
     @Override
     public String toString() {
-        return "Item: " + name + "Type: " + type + "";
+        return "Index: " + listNumber + "Name: " + name + "Type: " + type + "";
     }
 
 }

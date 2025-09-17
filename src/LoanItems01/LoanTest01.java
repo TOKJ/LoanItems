@@ -12,7 +12,7 @@ public class LoanTest01 {
 
         System.out.println("The following items are now registered: ");
         for (LoanItem loanItem : loanItems) {
-            System.out.println(loanItem);
+            System.out.println(loanItem.toString());
         }
     }
 }

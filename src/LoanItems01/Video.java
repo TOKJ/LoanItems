@@ -2,14 +2,14 @@ package LoanItems01;
 
 class Video extends LoanItem {
 
-    public Video(String name,String type) {
-        super(name, type);
+    public Video(String name,String type, int listNumber) {
+        super(name, type, listNumber);
     }
 
 
     @Override
     public String toString() {
-        return "Item: " + name + "\nType: " + type + "\n";
+        return "Index:  " + listNumber + "\nName: " + name + "\nType: " + type + "\n ";
     }
 
 }

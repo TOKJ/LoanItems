@@ -2,13 +2,13 @@ package LoanItems01;
 
 class Book extends LoanItem {
 
-    public Book(String name,String type) {
-        super(name, type);
+    public Book(String name,String type, int listNumber) {
+        super(name, type, listNumber);
     }
 
     @Override
     public String toString() {
-        return "Item: " + name + "\nType: " + type +  "\n";
+        return "Index:  " + listNumber + "   " + "\nType: " + type + "\nName: " + name +  "\n";
     }
 
 }
