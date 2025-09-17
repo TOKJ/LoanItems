@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ScannerHelperClass {
 
-    //Metode til hvor mange "LoanItems"
+    //Metode - finder ud af hvor mange "items" der skal oprettes; variable "amountOfItems".
+
     public LoanItem[] askAmountOfItems() {
         Scanner scanner = new Scanner(System.in);
 
@@ -32,7 +33,7 @@ public class ScannerHelperClass {
         }
 
 
-
+// oprettelse af array "loanItemRegister" som er "amountOfItems" langt, samt validering af input.
 
         LoanItem[] loanItemRegister = new LoanItem[amountOfItems];
 
