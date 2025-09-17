@@ -36,8 +36,8 @@ public class ScannerHelperClass {
         LoanItem[] loanItemRegister = new LoanItem[amountOfItems];
 
         for (int i = 0; i < amountOfItems; i++) {
-            System.out.println("\n\nEnter titel of item: ");
-            System.out.print("Item: " + (i + 1) + "\t  -\t" + "Enter titel: ");
+            System.out.println("\n\nEnter title of item: ");
+            System.out.print("Item: " + (i + 1) + "\t  -\t" + "Enter title: ");
             String name = scanner.nextLine();
             System.out.println();
 
