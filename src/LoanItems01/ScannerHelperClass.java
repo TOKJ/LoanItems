@@ -4,79 +4,71 @@ import java.util.Scanner;
 
 public class ScannerHelperClass {
 
-
-
-    //Metode til hvor mange kæledyr
-    public Pet[] askAmountOfPets() {
+    //Metode til hvor mange "LoanItems"
+    public LoanItem[] askAmountOfItems() {
         Scanner scanner = new Scanner(System.in);
 
-        int antalPets = 0;
-        int maxAmountOfPets = 25;
+        int amountOfItems = 0;
+        int maxAmountOfItems = 25;
 
 
-        while (antalPets <= 0 || antalPets > maxAmountOfPets) {
-            System.out.print("Please write the amount of pets for registering: ");
+        while (amountOfItems <= 0 || amountOfItems > maxAmountOfItems) {
+            System.out.print("Please write the amount of items for registering: ");
 
             if (scanner.hasNextInt()) {
-                antalPets = scanner.nextInt();
+                amountOfItems = scanner.nextInt();
                 scanner.nextLine();
 
-                if (antalPets <= 0) {
+                if (amountOfItems <= 0) {
                     System.out.println("Please only input a number above 0.");
-                } else if (antalPets > maxAmountOfPets) {
-                    System.out.println("Please only input a max of " + maxAmountOfPets + " pets!");
+                } else if (amountOfItems > maxAmountOfItems) {
+                    System.out.println("Please only input a max of " + maxAmountOfItems + " items for loan!");
                 }
             } else {
                 System.out.println("Error: please input a whole number!");
-                //scanner.next sletter forkert indput!
+                //scanner.next fjerner forkert input.
                 scanner.nextLine();
             }
         }
 
 
 
-        Pet[] petsRegister = new Pet[antalPets];
+        LoanItem[] loanItemRegister = new LoanItem[amountOfItems];
 
-        for (int i = 0; i < antalPets; i++) {
-            System.out.println("\n\nEnter name of pet: ");
-            System.out.print("Pet: " + (i + 1) + "\t  -\t" + "Enter name: ");
+        for (int i = 0; i < amountOfItems; i++) {
+            System.out.println("\n\nEnter titel of item: ");
+            System.out.print("Item: " + (i + 1) + "\t  -\t" + "Enter titel: ");
             String name = scanner.nextLine();
             System.out.println();
 
-//honest to god jeg ved ikke hvorfor det virker men nu er varriablen intialiseret :)
+
             String type = "";
 
             boolean validType = false;
 
             while (!validType) {
-                System.out.println("The following pet types are allowed: cat, dog, lizzard!");
-                System.out.print("Input pet type for " + name + ": ");
+                System.out.println("The following item types are allowed: Book, Video!");
+                System.out.print("Please write type for " + name + ": ");
                 type = scanner.nextLine();
                 System.out.println();
 
-                if (type.equalsIgnoreCase("dog") || type.equalsIgnoreCase("cat") ||type.equalsIgnoreCase("lizzard")) {
+                if (type.equalsIgnoreCase("Book") || type.equalsIgnoreCase("Video") {
                     validType = true;
-                } else{
-                    System.out.println("Error: please only input one of the following types: cat, dog, lizzard!");
+                } else {
+                    System.out.println("Error: please only input one of the following types: Book, Video!");
                 }
             }
 
-            //  petsRegister[i] = new Pet(name, type);
 
-            if (type.equalsIgnoreCase("cat")) {
-                petsRegister[i] = new Cat(name, "Cat");
+            if (type.equalsIgnoreCase("Book")) {
+                loanItemRegister[i] = new Book(name, "Book");
 
-            } else if (type.equalsIgnoreCase("dog")) {
-                petsRegister[i] = new Dog(name, "Dog");
-
-            } else if (type.equalsIgnoreCase("Lizzard")) {
-                petsRegister[i] = new Lizzard(name, "Lizzard");
+            } else if (type.equalsIgnoreCase("Video")) {
+                loanItemRegister[i] = new Video(name, "Video");
             }
-
-
         }
 
-        return petsRegister;
+        return loanItemRegister;
 
 
     }

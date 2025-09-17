@@ -1,22 +1,14 @@
 package LoanItems01;
 
-public class Book {
+class Book extends LoanItem {
 
-
-
-    public Dog(String name,String type) {
+    public Book(String name,String type) {
         super(name, type);
     }
 
     @Override
     public String toString() {
-        return "Pet: " + name + "\nType: " + type +  "\n"+ bark() + "\n";
+        return "Item: " + name + "\nType: " + type +  "\n";
     }
-
-    public String bark() {
-        return name + " says: Bark bark bark!";
-    }
-}
-
 
 }
