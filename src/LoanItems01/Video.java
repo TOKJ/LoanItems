@@ -6,9 +6,4 @@ class Video extends LoanItem {
         super(name, type);
     }
 
-
-    public String toString() {
-        return "    "+ name + "   " + type;
-    }
-
 }

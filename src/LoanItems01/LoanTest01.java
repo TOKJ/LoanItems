@@ -12,7 +12,7 @@ public class LoanTest01 {
 
         System.out.println("The following items are now registered: ");
         System.out.println("--------------------");
-        System.out.println("ID   TYPE    TITLE");
+        System.out.println("ID   TYPE         TITLE");
 
         int count = 1;
         for (LoanItem loanItem : loanItems) {
@@ -20,7 +20,7 @@ public class LoanTest01 {
             System.out.println(loanItem);
             count++;
         }
-        System.out.println("\n -- End of program --");
+        System.out.println("\n -- Thank you for registering --");
     }
 }
 

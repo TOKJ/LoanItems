@@ -7,8 +7,5 @@ class Book extends LoanItem {
     }
 
 
-    public String toString() {
-        return "    "+ name + "    " + type;
-    }
 
 }
