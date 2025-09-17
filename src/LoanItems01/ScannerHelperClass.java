@@ -33,6 +33,7 @@ public class ScannerHelperClass {
 
 
 
+
         LoanItem[] loanItemRegister = new LoanItem[amountOfItems];
 
         for (int i = 0; i < amountOfItems; i++) {
@@ -59,17 +60,12 @@ public class ScannerHelperClass {
                 }
             }
 
-
             if (type.equalsIgnoreCase("Book")) {
-                int listNumber = loanItemRegister[i].getListNumber();
-                listNumber++;
-                loanItemRegister[i] = new Book(name, "Book", listNumber);
+                loanItemRegister[i] = new Book(name, "Book");
 
 
             } else if (type.equalsIgnoreCase("Video")) {
-                int listNumber = loanItemRegister[i].getListNumber();
-                listNumber++;
-                loanItemRegister[i] = new Video(name, "Video", listNumber);
+                loanItemRegister[i] = new Video(name, "Video");
             }
         }
 
