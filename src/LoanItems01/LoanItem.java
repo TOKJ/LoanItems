@@ -25,7 +25,7 @@ public class LoanItem {
     //toString
     @Override
     public String toString() {
-        return "Index: " + "Name: " + name + "Type: " + type + "";
+        return "Name: " + name + "Type: " + type + "";
     }
 
 }

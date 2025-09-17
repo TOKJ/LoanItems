@@ -14,7 +14,7 @@ public class LoanTest01 {
 
         int count = 1;
         for (LoanItem loanItem : loanItems) {
-            System.out.println("item no. "+ count);
+            System.out.println("ITEM no. " + count);
             System.out.println(loanItem);
             count++;
         }

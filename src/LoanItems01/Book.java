@@ -8,7 +8,7 @@ class Book extends LoanItem {
 
     @Override
     public String toString() {
-        return "Index:  " + "   " + "\nType: " + type + "\nName: " + name +  "\n";
+        return "   " + "\nType: " + type + "\nName: " + name +  "\n";
     }
 
 }
