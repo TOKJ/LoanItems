@@ -52,7 +52,7 @@ public class ScannerHelperClass {
                 type = scanner.nextLine();
                 System.out.println();
 
-                if (type.equalsIgnoreCase("Book") || type.equalsIgnoreCase("Video") {
+                if (type.equalsIgnoreCase("Book") || type.equalsIgnoreCase("Video")) {
                     validType = true;
                 } else {
                     System.out.println("Error: please only input one of the following types: Book, Video!");
@@ -75,4 +75,4 @@ public class ScannerHelperClass {
 }
 
 
-}
+
